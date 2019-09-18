@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dotnetdemoapp-deployment
-  namespace: kube-system
+  namespace: default
   labels:
     app: dotnetdemoapp
 spec:
