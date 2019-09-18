@@ -22,6 +22,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.0.76" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Elastic.Apm.NetCoreAll" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />

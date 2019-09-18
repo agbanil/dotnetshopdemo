@@ -8,6 +8,7 @@ namespace Microsoft.eShopWeb.Infrastructure.Logging
         private readonly ILogger<T> _logger;
         public LoggerAdapter(ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("/var/log/myapp-{Date}.log");
             _logger = loggerFactory.CreateLogger<T>();
         }
 

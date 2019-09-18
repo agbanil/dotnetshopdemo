@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
+using Elastic.Apm.NetCoreAll;
 
 namespace Microsoft.eShopWeb.Web
 {
@@ -185,6 +186,7 @@ namespace Microsoft.eShopWeb.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseAllElasticApm(Configuration);
             //app.UseDeveloperExceptionPage();
             app.UseHealthChecks("/health",
                 new HealthCheckOptions
@@ -218,7 +220,7 @@ namespace Microsoft.eShopWeb.Web
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
