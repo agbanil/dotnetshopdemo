@@ -23,3 +23,5 @@ spec:
           env:
             - name: ASPNETCORE_ENVIRONMENT
               value: Development
+            - name: ELASTIC_APM_SERVER_URLS
+              value: apm.kube-system.svc.cluster.local:8200
